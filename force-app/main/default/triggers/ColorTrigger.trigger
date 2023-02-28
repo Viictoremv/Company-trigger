@@ -4,8 +4,8 @@ trigger ColorTrigger on Account (after insert) {
             ColorTriggerLogic.orangeOpportunity(acc);
         }
         else{
-            if(acc.AnnualRevenue < 10000){  
-                ColorTriggerLogic.redOpportunity(acc);    
+            if(acc.AnnualRevenue < 10000){   //evitar hardcoging
+                ColorTriggerLogic.redOpportunity(acc);  //evitar logica en el trigger  
             }
             if(acc.AnnualRevenue >= 10000 && acc.AnnualRevenue < 30000){
                 ColorTriggerLogic.yellowOpportunity(acc);
