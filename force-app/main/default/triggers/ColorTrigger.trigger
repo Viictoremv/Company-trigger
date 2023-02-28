@@ -1,4 +1,4 @@
-trigger ColorTrigger on Account (before insert, before update) {
+trigger ColorTrigger on Account (after insert) {
     for(Account acc : Trigger.new){ //Bulkify code
         if(acc.Registe_date__c < Date.today()){
             ColorTriggerLogic.orangeOpportunity(acc);
