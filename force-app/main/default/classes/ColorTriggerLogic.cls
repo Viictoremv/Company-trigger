@@ -1,30 +1,42 @@
 public with sharing class ColorTriggerLogic {
-    public static Boolean isLowerThan10k(Account acc){
-        if(acc.AnnualRevenue< 10000){
-            return true;
-        }
-        return false;
+
+    public static void redOpportunity(Account acc){
+        Opportunity opportunity = new Opportunity();
+        opportunity.Name = acc.Name + 'opportunity';
+        opportunity.CloseDate = Date.newInstance(2023, 03, 15);
+        opportunity.StageName = 'Prospecting';
+        opportunity.Photo_url__c = 'https://www.colorcombos.com/images/colors/990000.png'; //rojo
+        opportunity.AccountId = acc.Id;
+        insert opportunity;  
     }
 
-    public static Boolean isLowerThan30kAndHigherThan10k(Opportunity opp){ 
-        if(opp.Annual_Income__c >= 10000 && opp.Annual_Income__c <= 30000){
-            return true;
-        }
-        return false;
+    public static void yellowOpportunity(Account acc){
+        Opportunity opportunity = new Opportunity();
+        opportunity.Name = acc.Name + 'opportunity';
+        opportunity.CloseDate = Date.newInstance(2023, 03, 15);
+        opportunity.StageName = 'Prospecting';
+        opportunity.Photo_url__c = 'https://www.colorcombos.com/images/colors/FDD023.png'; //amarillo
+        opportunity.AccountId = acc.Id;
+        insert opportunity;  
     }
 
-    public static Boolean isHigherThan30k(Opportunity opp){
-        if(opp.Annual_Income__c > 30000){
-            return true;
-        }
-        return false;
+    public static void greenOpportunity(Account acc){
+        Opportunity opportunity = new Opportunity();
+        opportunity.Name = acc.Name + 'opportunity';
+        opportunity.CloseDate = Date.newInstance(2023, 03, 15);
+        opportunity.StageName = 'Prospecting';
+        opportunity.Photo_url__c = 'https://www.colorpsychology.org/wp-content/uploads/2015/02/green-1.png'; //amarillo
+        opportunity.AccountId = acc.Id;
+        insert opportunity;  
     }
 
-    public static Boolean Date(Opportunity opp){
-        if(opp.CloseDate < Date.today()){
-            return true;
-        }
-        return false;
+    public static void orangeOpportunity(Account acc){
+        Opportunity opportunity = new Opportunity();
+        opportunity.Name = acc.Name + 'opportunity';
+        opportunity.CloseDate = Date.newInstance(2023, 03, 15);
+        opportunity.StageName = 'Prospecting';
+        opportunity.Photo_url__c = 'https://t4.ftcdn.net/jpg/03/29/19/15/360_F_329191596_tRQiV7LZjTZtuPM09QyOS09HV1D9VimE.jpg'; //amarillo
+        opportunity.AccountId = acc.Id;
+        insert opportunity;  
     }
-
 }
