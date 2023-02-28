@@ -35,7 +35,7 @@ public with sharing class ColorTriggerLogic {
         opportunity.Name = acc.Name + 'opportunity';
         opportunity.CloseDate =  date.today();
         opportunity.StageName = 'Prospecting';
-        opportunity.Photo_url__c = 'https://t4.ftcdn.net/jpg/03/29/19/15/360_F_329191596_tRQiV7LZjTZtuPM09QyOS09HV1D9VimE.jpg'; //amarillo
+        opportunity.Photo_url__c = 'https://t4.ftcdn.net/jpg/03/29/19/15/360_F_329191596_tRQiV7LZjTZtuPM09QyOS09HV1D9VimE.jpg'; //naranja
         opportunity.AccountId = acc.Id;
         insert opportunity;  
     }
