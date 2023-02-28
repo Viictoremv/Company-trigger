@@ -30,7 +30,7 @@ public class ColorTriggerLogicTest {
         System.assertEquals(rojo, oppList[0].Photo_url__c);
         System.assertEquals(amarillo, oppList[1].Photo_url__c);
         System.assertEquals(verde, oppList[2].Photo_url__c);
-        System.assertEquals(naranja, oppList[2].Photo_url__c);
+        System.assertEquals(naranja, oppList[3].Photo_url__c);
 
       }
 }
