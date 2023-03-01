@@ -4,7 +4,7 @@ trigger ColorTrigger on Account (after insert) {
             ColorTriggerLogic.orangeOpportunity(acc);
         }
         else{
-            Integer annualRevenue = acc.AnnualRevenue;
+            Double annualRevenue = acc.AnnualRevenue;
             if(annualRevenue < 10000){   //evitar hardcoging
                 ColorTriggerLogic.redOpportunity(acc);  //evitar logica en el trigger  
             }
